@@ -30,9 +30,9 @@ function callJson() {
 
 function newText(title, current, previous) {
   var text = `<div class="small-card-text">
-    <h3>${title}</h3>
-    <span id="dots"></span>
-    <p id="current-time" class="text-col-span">${current}hrs</p>
+    <p class='card-title'>${title}</p>
+    <span class="dots"></span>
+    <p class="current-time" class="text-col-span">${current}hrs</p>
     <p class='text-col-span previous'>Last week - ${previous}hrs</p>
   </div>`;
   return text;

@@ -48,8 +48,9 @@ h1 {
   font-weight: 300;
 }
 
-h3 {
+.card-title {
   font-weight: 400;
+  font-size: 1.3rem;
 }
 
 /* ---------
@@ -102,7 +103,7 @@ small card
   grid-template-rows: 30% 40% 30%;
 }
 
-#dots {
+.dots {
   align-self: center;
   justify-self: end;
   width: 4px;
@@ -112,8 +113,8 @@ small card
   position: relative;
   margin-right: 1rem;
 }
-#dots:after,
-#dots::before {
+.dots:after,
+.dots::before {
   position: absolute;
   content: "";
   border-radius: 5px;
@@ -123,10 +124,10 @@ small card
   left: -8px;
   background-color: rgb(255, 255, 255);
 }
-#dots::before {
+.dots::before {
   left: 8px;
 }
-#current-time {
+.current-time {
   font-weight: 300;
   font-size: 3.5rem;
   margin: 0;
@@ -207,7 +208,7 @@ User card
     display: flex;
     gap: 10px;
   }
-  #dots {
+  .dots {
     margin-top: 20%;
   }
   .user-text-container img {
@@ -232,7 +233,7 @@ User card
   .text-col-span {
     grid-column: span 1;
   }
-  #current-time {
+  .current-time {
     font-size: 2rem;
     margin-top: 0;
   }
