@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,500&display=swap");
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-Blue: hsl(236, 100%, 87%);
+}
+
+.work {
+  background-color: var(--work);
+}
+.play {
+  background-color: var(--play);
+}
+.study {
+  background-color: var(--study);
+}
+.exercise {
+  background-color: var(--exercise);
+}
+.social {
+  background-color: var(--social);
+}
+.self-care {
+  background-color: var(--self-care);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+h1 {
+  margin-top: 0;
+  font-size: 2.3em;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+/* ---------
+Display
+--------- */
+main {
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, auto);
+}
+
+/* ---------
+small card
+--------- */
+.card {
+  height: 280px;
+  width: 250px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 15% auto;
+  /* overflow: auto; */
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.card-img {
+  position: absolute;
+  right: 5%;
+}
+.bottom {
+  background-color: var(--dark-blue);
+  border-radius: 1.3rem;
+  height: 100.5%;
+  width: 100.2%;
+}
+
+.small-card-text {
+  margin: 0.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 30% 40% 30%;
+}
+
+#dots {
+  align-self: center;
+  justify-self: end;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 1rem;
+}
+#dots:after,
+#dots::before {
+  position: absolute;
+  content: "";
+  border-radius: 5px;
+  width: 4px;
+  height: 4px;
+  top: 0;
+  left: -8px;
+  background-color: rgb(255, 255, 255);
+}
+#dots::before {
+  left: 8px;
+}
+#current-time {
+  font-weight: 300;
+  font-size: 3.5rem;
+  margin: 0;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.previous {
+  color: var(--pale-Blue);
+  font-weight: 300;
+}
+
+.text-col-span {
+  grid-column: span 2;
+}
+
+/* ---------
+User card
+--------- */
+.user {
+  grid-template-rows: 65% 35%;
+  border-radius: 25px;
+  background-color: var(--dark-blue);
+}
+.user-top {
+  background-color: var(--Blue);
+  border-radius: 25px;
+}
+.user-text-container > img {
+  width: 40%;
+  border: white solid 4px;
+  border-radius: 50%;
+}
+.user-text-container {
+  margin: 2rem 1.5rem;
+}
+
+.user-bottom-text {
+  margin: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
+}
+
+.user-text-container p {
+  margin-top: 1.7rem;
+  margin-bottom: 0;
+  color: var(--pale-Blue);
+}
+
+.card-row-span {
+  grid-row: span 2;
+  height: 100%;
+}
+.user-btn {
+  font-weight: 300;
+}
+.user-btn:hover {
+  font-size: large;
+  cursor: pointer;
+}
+.active {
+  font-weight: 500;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    height: auto;
+    margin: 2rem auto;
+  }
+  p {
+    font-size: 0.8em;
+    align-self: center;
+  }
+  .user-text-container {
+    font-size: 0.5rem;
+    display: flex;
+    gap: 10px;
+  }
+  #dots {
+    margin-top: 20%;
+  }
+  .user-text-container img {
+    width: 30%;
+  }
+  .user-bottom-text {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+  .card {
+    height: 180px;
+  }
+  .card-container {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .small-card-text {
+    gap: 15px;
+  }
+  .text-col-span {
+    grid-column: span 1;
+  }
+  #current-time {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}
